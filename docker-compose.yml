@@ -3,18 +3,18 @@ services:
   nginx-streamer:
     image: cb51/nginx-streamer
     environment:
-      - "TITLE=My Stream"
-      - "STREAM_NAME=myStream"
+      - "TITLE=Canal 6 Honduras"
+      - "STREAM_NAME=canal6hn"
       - "SERVER_IP=127.0.0.1"
       - "WORKER_PROCESSES=1"
       - "NGINX_HTTP_CONF=access_log /tmp/hls/access.log;" 
-      - "FEEDBACK=https://google.com" 
+      - "FEEDBACK=https://canal6.com.hn" 
       - "GANALYTICS=UA-00000000-0"
       - "BLACKLIST_MESSAGE=<strong>Blacklist Message!</strong>"
         # Blacklisted IPs with be redirected to error page
       - "BLACKLIST_IPS=192.168.120.5 1;192.168.120.6 1;"  
-      - "HEADER=<h1>myStream</h1>"
-      - "FOOTER=footer message"
+      - "HEADER=<h1>Canal 6 Honduras</h1>"
+      - "FOOTER=En vivo desde San Pedro Sula, Honduras"
     deploy:
       replicas: 1
       resources:
